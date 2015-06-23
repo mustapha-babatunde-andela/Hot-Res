@@ -1,0 +1,35 @@
+{
+  "name": "hot-res",
+  "version": "1.0.0",
+  "description": "Hotel Reservation Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-bmustapha/Hot-Res.git"
+  },
+  "keywords": [
+    "Hotel",
+    "Search",
+    "Hotel",
+    "Reservation"
+  ],
+  "author": "Mustapha Babatunde Oluwaleke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-bmustapha/Hot-Res/issues"
+  },
+  "homepage": "https://github.com/andela-bmustapha/Hot-Res#readme",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "cloudinary": "^1.2.1",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.0",
+    "jsonwebtoken": "^5.0.2",
+    "mongoose": "~3.8.0",
+    "prerender-node": "^1.2.1"
+  }
+}
