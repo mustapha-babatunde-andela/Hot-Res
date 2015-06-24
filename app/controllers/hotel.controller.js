@@ -5,6 +5,22 @@ var cloudinary = require('cloudinary');
 
 
 module.exports = {
+
+  // api call function to add hotel profile to database
+  addHotel: function(req, res, next) {
+  
+    var hotel = new Hotel(req.body);
+    hotel.save(function(err) {
+      if(err) {
+        return res.json({ message:'Hotel add error' });
+      }
+      res.json({ message:'Hotel Added' });
+      next();
+    });
+  },
+
+
+
   /**
    * [getHotels description]
    * @param  {[req]}
@@ -102,19 +118,7 @@ module.exports = {
 
   },
 
-  // api call function to add hotel profile to database
-  addHotel: function(req, res, next) {
-
-    
-    var hotel = new Hotel(req.body);
-    hotel.save(function(err) {
-      if(err) {
-        return res.json({ message:'Hotel add error' });
-      }
-      res.json({ message:'Hotel Added' });
-      next();
-    });
-  },
+  
   /**
    * [editHotel description]
    * @param  {[req]}
