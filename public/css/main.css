@@ -1,0 +1,126 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+  margin-bottom: 60px;
+  background-color: #FFFFFF;
+}
+
+
+.logo {
+  text-align: center;
+  padding: 10px;
+}
+
+.responsive-image {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+footer {
+  font-size: 18px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #B6B6B6 !important;
+  border: solid 1px #CCCCCC;
+  text-align: center;
+  /*color: #FFFFFF !important;*/
+}
+
+.footer-link {
+  /*color: #F5F5F5;*/
+}
+
+.body-container {
+  margin-bottom: 20px;
+}
+
+#main-image {
+  background-image: url("../img/Lagos-skyline.png");
+  height: 299px;
+  border: solid 1px #CCCCCC;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.search-form {
+  margin-top: 50px;
+}
+
+.panel {
+  /*opacity: 0.9;*/
+  border-radius: 2px;
+  text-align: center;
+}
+
+.full-length {
+  width: 100%;
+}
+
+.left-aligned {
+  text-align: left;
+}
+
+.center-aligned {
+  text-align: center;
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+.submit-marigin {
+  margin-top: 10px;
+}
+
+.body-margin {
+  margin-top: 10px;
+}
+
+#map-section {
+  background-image: url("../img/maps.png");
+  height: 150px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

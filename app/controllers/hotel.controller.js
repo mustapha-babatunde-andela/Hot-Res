@@ -37,54 +37,18 @@ module.exports = {
      */
     
 
-    if (req.query.state && req.query.city) { // if both state and city are specified in query
-
-      Hotel.find({state: {$regex: req.query.state, $options: '$i'}, city: {$regex: req.query.city, $options: '$i'}, bookable: 'yes'}, function(err, hotel) {
-        if (err) {
-          res.json({message: 'Server Error'});
-        }
-        if (hotel) {
-          if (hotel.length === 0) {
-            res.json({message: 'No hotel found in ' + req.query.city + ', ' + req.query.state});
-          } else if (hotel.length > 0) {
-            res.json(hotel);
-          }
-        }
-      });
-    } else if (req.query.state) { // if only state is specified in query
-      Hotel.find({state: {$regex: req.query.state, $options: '$i'}, bookable: 'yes'}, function(err, hotel) {
-        if (err) {
-          res.json({message: 'Server Error'});
-        }
-        if (hotel) {
-          if (hotel.length === 0) {
-            res.json({message: 'No hotel found in ' + req.query.state});
-          } else if (hotel.length > 0) {
-            res.json(hotel);
-          }
-        }
-      });
-    } else if (req.query.city) { // if only city is specified in query
-      Hotel.find({city: {$regex: req.query.city, $options: '$i'}, bookable: 'yes'}, function(err, hotel) {
-        if (err) {
-          res.json({message: 'Server Error'});
-        }
+    Hotel.find({state: {$regex: req.query.state, $options: '$i'}, city: {$regex: req.query.city, $options: '$i'}, bookable: 'yes'}, function(err, hotel) {
+      if (err) {
+        res.json({message: 'Server Error'});
+      }
+      if (hotel) {
         if (hotel.length === 0) {
-          res.json({message: 'No hotel found in ' + req.query.city});
+          res.json({message: 'No hotel found in ' + req.query.city + ', ' + req.query.state});
         } else if (hotel.length > 0) {
           res.json(hotel);
         }
-      });
-    } else { // pull all hotels in database
-      Hotel.find(function(err, hotels){
-        if (err) {
-          res.json({message: 'No hotel found!'});
-        }
-        if (hotels) {
-          res.json(hotels);
-        }
-      });
-    }
+      }
+    });
   },
 
   getManagerHotels: function(req, res, next) {
